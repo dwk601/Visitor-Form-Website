@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+    <title>Responsive Visitor Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Visitor Form</h3>
+            </div>
+            <div class="panel-body">
+              <form
+                class="form-horizontal"
+                id="visitorForm"
+                method="POST"
+                action="process.php"
+              >
+                <fieldset>
+                  <!-- Form Name -->
+                  <legend>Personal Information</legend>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="firstName"
+                      >First Name</label
+                    >
+                    <div class="col-md-4">
+                      <input
+                        id="firstName"
+                        name="firstName"
+                        type="text"
+                        placeholder="First Name"
+                        class="form-control input-md"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="lastName"
+                      >Last Name</label
+                    >
+                    <div class="col-md-4">
+                      <input
+                        id="lastName"
+                        name="lastName"
+                        type="text"
+                        placeholder="Last Name"
+                        class="form-control input-md"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="address"
+                      >Address</label
+                    >
+                    <div class="col-md-4">
+                      <input
+                        id="address"
+                        name="address"
+                        type="text"
+                        placeholder="Address"
+                        class="form-control input-md"
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="city"
+                      >City</label
+                    >
+                    <div class="col-md-4">
+                      <input
+                        id="city"
+                        name="city"
+                        type="text"
+                        placeholder="City"
+                        class="form-control input-md"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="state"
+                      >State</label
+                    >
+                    <div class="col-md-4">
+                      <input
+                        id="state"
+                        name="state"
+                        type="text"
+                        placeholder="ex. CA"
+                        class="form-control input-md"
+                        pattern="[A-Za-z]{2}"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="zip">Zip</label>
+                    <div class="col-md-4">
+                      <input
+                        id="zip"
+                        name="zip"
+                        type="text"
+                        placeholder="Zip"
+                        class="form-control input-md"
+                        pattern="[0-9]{5}"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="phone"
+                      >Phone</label
+                    >
+                    <div class="col-md-4">
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="text"
+                        placeholder="(xxx)xxx-xxxx"
+                        class="form-control input-md"
+                        pattern="\([0-9]{3}\)[0-9]{3}-[0-9]{4}"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="email"
+                      >Email</label
+                    >
+                    <div class="col-md-4">
+                      <input
+                        id="email"
+                        name="email"
+                        type="text"
+                        placeholder="Email"
+                        class="form-control input-md"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Multiple Radios (inline) -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="howFound"
+                      >How did you find my page?</label
+                    >
+                    <div class="col-md-4">
+                      <label class="radio-inline" for="howFound-0"
+                        ><input
+                          type="radio"
+                          name="howFound"
+                          id="howFound-0"
+                          value="1"
+                          required=""
+                        />Internet</label
+                      >
+                      <label class="radio-inline" for="howFound-1"
+                        ><input
+                          type="radio"
+                          name="howFound"
+                          id="howFound-1"
+                          value="2"
+                          required=""
+                        />Friend</label
+                      >
+                      <label class="radio-inline" for="howFound-2"
+                        ><input
+                          type="radio"
+                          name="howFound"
+                          id="howFound-2"
+                          value="3"
+                          required=""
+                        />Other</label
+                      >
+                    </div>
+                  </div>
+                  <!-- Textarea -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="comments"
+                      >Comments</label
+                    >
+                    <div class="col-md-4">
+                      <textarea
+                        class="form-control"
+                        id="comments"
+                        name="comments"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <!-- Button -->
+                  <div class="form-group">
+                    <label
+                      class="col-md-4 control-label"
+                      for="submitBtn"
+                    ></label>
+                    <div class="col-md-4">
+                      <button
+                        id="submitBtn"
+                        name="submitBtn"
+                        class="btn btn-primary"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                    >
+                    Show Logs
+                </button>
+                <!-- Modal -->
+                <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                >
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Logs</h5>
+                        <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body
+                        ">
+                        <div class="container">
+                            <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Address</th>
+                                        <th>City</th>
+                                        <th>State</th>
+                                        <th>Zip</th>
+                                        <th>Phone</th>
+                                        <th>Email</th>
+                                        <th>How Found</th>
+                                        <th>Comments</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>Doe</td>
+                                        <td>123 Main St</td>
+                                        <td>San Diego</td>
+                                        <td>CA</td>
+                                        <td>92101</td>
+                                        <td>(619)555-5555</td>
+                                        <td>
+                                        <a href="mailto: kdoim100@gmail.com"></a>
+                                
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  </body>
+</html>
+<!-- --SELF GRADE--
+REFACTOR JS        A 
+VALIDATION LIBRARY   B 
+FLEXBOX LAYOUT/FORM HTML    A 
+
+--EXTRA CREDIT COMPLETED--
+MASKING PLUGIN (3pts)    NO
+ADDITIONAL COMMENTS  YES --> 
