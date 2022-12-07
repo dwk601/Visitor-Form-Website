@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+    <script src="validation.js"></script>
     <title>Responsive Visitor Form</title>
   </head>
   <body>
@@ -226,70 +227,25 @@
                   </div>
                 </fieldset>
               </form>
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                    >
-                    Show Logs
-                </button>
-                <!-- Modal -->
-                <div
-                    class="modal fade"
-                    id="exampleModal"
-                    tabindex="-1"
-                    role="dialog"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                >
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs</h5>
-                        <button
-                            type="button"
-                            class="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <div class="modal-body
-                        ">
-                        <div class="container">
-                            <div class="row">
-                            <div class="col-md-12">
-                                <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Address</th>
-                                        <th>City</th>
-                                        <th>State</th>
-                                        <th>Zip</th>
-                                        <th>Phone</th>
-                                        <th>Email</th>
-                                        <th>How Found</th>
-                                        <th>Comments</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>123 Main St</td>
-                                        <td>San Diego</td>
-                                        <td>CA</td>
-                                        <td>92101</td>
-                                        <td>(619)555-5555</td>
-                                        <td>
-                                        <a href="mailto: kdoim100@gmail.com"></a>
-                                
-            </div>
+              <!-- create a log button that will display the log of all the form submissions -->
+              <button
+                id="logBtn"
+                type="button"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                View Log
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
           </div>
         </div>
         <div class="col-md-2"></div>
